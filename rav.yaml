@@ -1,0 +1,18 @@
+scripts:
+  server:
+    - cd src && python manage.py runserver
+  makemigration:
+    - cd src && python manage.py makemigrations
+  migrate:    
+    - cd src && python manage.py migrate
+  shell:    
+    - cd src && python manage.py shell  
+  # excecute this in command prompt:
+    #  curl -X POST -H "Content-Type: application/json" -d "{\"username\":\"pramod\",\"password\":\"pramod\"}" http://127.0.0.1:8000/api/token/pair
+  token_gen: |
+    curl -X POST -H "Content-Type: application/json" -d '{"username":"pramod","password":"pramod"}' http://127.0.0.1:8000/api/token/pair
+
+#  curl_protect: |
+#     curl -X POST -H "Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3ODAzODA1LCJpYXQiOjE3Mjc4MDM1MDUsImp0aSI6Ijc2ZjVlZjUwMGQwNDQzMjBhOTExMWVkZDY4NDU5YmVlIiwidXNlcl9pZCI6MX0.R2YmskbhajTYXFBtWRPD9VjGBcj3svIq6q6Yq9DXEEM"  http://127.0.0.1:8000/api/me
+  curl_protect: |
+    curl -X GET -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3ODA0MTM2LCJpYXQiOjE3Mjc4MDM4MzYsImp0aSI6IjYyNzgyZjBmMDQ4MDQ4OTg5ZDFjMmE3MjdhZGU4MjQ0IiwidXNlcl9pZCI6MX0.E6RRPXKnK08ccJNdOAnJP39U3iFQMqHeefqkqzWE0r8" http://127.0.0.1:8000/api/me

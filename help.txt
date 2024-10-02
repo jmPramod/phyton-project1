@@ -1,0 +1,18 @@
+uv venv
+ .venv\Scripts\activate
+uv pip install Django django-ninja
+uv pip install rav
+cd src
+django-admin startproject main .
+
+
+pip freeze > requirements.txt
+
+
+rav run server
+
+1.sqlite3.OperationalError: no such table: django_session
+we need to do migration
+2.python manage.py createsuperuser
+
+pip freez
