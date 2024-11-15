@@ -5,3 +5,4 @@ class WaitListEntry(models.Model):
     #user=
     email=models.EmailField()
     timestamp=models.DateTimeField(auto_now_add=True)
+    updated=models.DateTimeField(auto_now=True)

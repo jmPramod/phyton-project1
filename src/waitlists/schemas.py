@@ -21,6 +21,7 @@ class WaitListEntryDetailSchema(Schema):
       #get =>data
     #waitlistentryDataIn
     email:EmailStr
+    updated:datetime
     timestamp:datetime
             
         

@@ -16,3 +16,6 @@ we need to do migration
 2.python manage.py createsuperuser
 
 pip freez
+
+
+pip install -r requirements.txt
